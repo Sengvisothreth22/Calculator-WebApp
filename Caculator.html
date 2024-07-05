@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+       #main{width: 300px; height: 280px; background-color: palegoldenrod;}
+       input{ width: 20%; height: 40px; font-size: 20px; margin: 4px;}
+       #Mike{width:96%; height: 50px;background-color: silver;} 
+
+       </style>
+    </head>
+
+    <body>
+      
+        <div id="main">
+              <form name="Vi">
+            <input type="text" name="Soth" placeholder="0" id="Mike"> <br>
+
+            <input type="button" value="1" onclick="Vi.Soth.value+=1">
+            <input type="button" value="2" onclick="Vi.Soth.value+=2">
+            <input type="button" value="3" onclick="Vi.Soth.value+=3">
+            <input type="button" value="+" onclick="add()">
+            <br> 
+
+
+            <input type="button" value="4" onclick="Vi.Soth.value+=4">
+            <input type="button" value="5" onclick="Vi.Soth.value+=5">
+            <input type="button" value="6" onclick="Vi.Soth.value+=6">
+            <input type="button" value="-" onclick="sub()">
+            <br> 
+
+
+            <input type="button" value="7" onclick="Vi.Soth.value+=7">
+            <input type="button" value="8" onclick="Vi.Soth.value+=8">
+            <input type="button" value="9" onclick="Vi.Soth.value+=9">
+            <input type="button" value="/" onclick="di()">
+            <br> 
+            
+            <input type="button" value="C" onclick="Vi.Soth.value =''">
+            <input type="button" value="0" onclick="Vi.Soth.value+=0">
+            <input type="button" value="=" onclick="Vi.Soth.value=eval(Vi.Soth.value)">
+            <input type="button" value="x" onclick="mul()">
+            <br> 
+
+
+              </form>
+        </div>
+
+        <script>
+              // addition 
+               function add(){
+                var somnea =0, visoth=0; 
+                somnea=Vi.Soth.value;
+                visoth=somnea.charAt(somnea.length-1);
+                
+                if(visoth=='+' ||visoth=='-' ||visoth=='/' || visoth=='*'){
+                   
+                    Vi.Soth.value = somnea.substring(0,somnea.length-1);
+                    Vi.Soth.value+='+';
+                }
+
+                else{
+                    Vi.Soth.value+='+';
+
+                }
+             }
+
+             // substraction 
+             function sub(){
+                var somnea =0, visoth=0; 
+                somnea=Vi.Soth.value;
+                visoth=somnea.charAt(somnea.length-1);
+                
+                if(visoth=='+' ||visoth=='-' ||visoth=='/' || visoth=='*'){
+                   
+                    Vi.Soth.value = somnea.substring(0,somnea.length-1);
+                    Vi.Soth.value+='-';
+                }
+
+                else{
+                    Vi.Soth.value+='-';
+
+                }
+             }
+            // Division 
+             function di(){
+                var somnea =0, visoth=0; 
+                somnea=Vi.Soth.value;
+                visoth=somnea.charAt(somnea.length-1);
+                
+                if(visoth=='+' ||visoth=='-' ||visoth=='/' || visoth=='*'){
+                   
+                    Vi.Soth.value = somnea.substring(0,somnea.length-1);
+                    Vi.Soth.value+='/';
+                }
+
+                else{
+                    Vi.Soth.value+='/';
+
+                }
+             }
+
+              // Multiplication 
+
+              function mul (){
+                var somnea =0, visoth=0; 
+                somnea=Vi.Soth.value;
+                visoth=somnea.charAt(somnea.length-1);
+                
+                if(visoth=='+' ||visoth=='-' ||visoth=='/' || visoth=='*'){
+                   
+                    Vi.Soth.value = somnea.substring(0,somnea.length-1);
+                    Vi.Soth.value+='*';
+                }
+
+                else{
+                    Vi.Soth.value+='*';
+
+                }
+             }
+
+
+        </script>
+
+    </body>
+</html>
